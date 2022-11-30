@@ -126,7 +126,7 @@ function App() {
                         <div className="results">
                             {!loadingNewQuestions && <p className="score">You scored {correctAnswers}/5 correct answers</p>}
                             {loadingNewQuestions && <p className="loading-new-questions">Loading...</p>}
-                            <button onClick={restartGame} className="button button-additional">Play Again</button>
+                            {!loadingNewQuestions && <button onClick={restartGame} className="button button-additional">Play Again</button>}
                         </div>
                     }
                 </main>
