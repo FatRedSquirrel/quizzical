@@ -14,7 +14,14 @@ export default function Answer(props) {
                 border: "0.794239px solid transparent",
                 opacity: 1
             }
-        } else if (props.isChosen && !props.correct) {
+        } else if (props.correct && !props.isChosen) {
+            styles = {
+                backgroundColor: "#94D7A2",
+                border: "0.794239px solid transparent",
+                opacity: 0.5
+            }
+        }
+        else if (props.isChosen && !props.correct) {
             styles = {
                 backgroundColor: "#F8BCBC",
                 border: "0.794239px solid transparent",
