@@ -20,7 +20,7 @@ function App() {
     useEffect(() => {
         fetch("https://opentdb.com/api.php?amount=50")
             .then(resp => resp.json())
-            .then(data => setQuestions(createQuestionsObjects(data.results.slice(0, 5))))
+            .then(data => setQuestions(createQuestionsObjects(shuffle(data.results).slice(0, 5))))
             .then(() => {
                 setIsGameOver(false);
                 setIsGameStarted(true);
