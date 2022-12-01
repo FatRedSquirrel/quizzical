@@ -145,7 +145,7 @@ function App() {
                     <div className="questions">{questionElements}</div>
                     {!isGameOver &&
                         <div className="results">
-                            {isWarningShown && <p className="warning">You haven't answered all the questions</p>}
+                            {isWarningShown && <p className="warning">Please, answer all the questions</p>}
                             <button
                                 onClick={questions.some(question => !question.isAnswered) ? showWarning : finishGame}
                                 className="button button-additional">
@@ -157,7 +157,7 @@ function App() {
                     {isGameOver && isAllQuestionsAnswered &&
                         <div className="results">
                             {!loadingNewQuestions &&
-                                <p className="score">You scored {correctAnswers}/5 correct answers</p>}
+                                <p className="score">You scored {correctAnswers}/5 correct answers!</p>}
                             {loadingNewQuestions && <p className="loading-new-questions">Loading...</p>}
                             {!loadingNewQuestions &&
                                 <button onClick={restartGame} className="button button-additional">Play Again</button>}
