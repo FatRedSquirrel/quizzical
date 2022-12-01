@@ -151,7 +151,7 @@ body {
     gap: 20px;
 }
 
-.score {
+.score, .warning {
     font-weight: 700;
     font-size: 14px;
     line-height: 15px;
